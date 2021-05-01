@@ -451,9 +451,6 @@ module Invidious::Routes::Login
         PG_DB.exec("INSERT INTO users VALUES (#{args})", args: user_array)
         PG_DB.exec("INSERT INTO session_ids VALUES ($1, $2, $3)", sid, email, Time.utc)
 
-        view_name = "subscriptions_#{sha256(user.email)}"
-        PG_DB.exec("CREATE MATERIALIZED VIEW #{view_name} AS #{MATERIALIZED_VIEW_SQL.call(user.email)}")
-
         if Kemal.config.ssl || CONFIG.https_only
           secure = true
         else

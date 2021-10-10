@@ -1,6 +1,6 @@
 <div align="center">
   <img src="assets/invidious-colored-vector.svg" width="192" height="192" alt="Invidious logo">
-  <h1>Invidious</h1>
+  <h1>Invidious TV edition</h1>
 
   <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">
     <img alt="License: AGPLv3+" src="https://shields.io/badge/License-AGPL%20v3+-blue.svg">
@@ -20,6 +20,10 @@
   <a href="https://github.com/humanetech-community/awesome-humane-tech">
     <img alt="Awesome Humane Tech" src="https://raw.githubusercontent.com/humanetech-community/awesome-humane-tech/main/humane-tech-badge.svg?sanitize=true">
   </a>
+  <h2>TV edition changes</h2>
+  Updated player interface to be full width and height of 16:9 tv browsers (fakes full screen as chromium no longer allows auto fullscreen)
+  Added directional remote support and selection for video grids
+
 
   <h3>An open source alternative front-end to YouTube</h3>
 

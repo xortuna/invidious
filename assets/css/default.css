@@ -10,7 +10,10 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+.active {
+ border: 4px solid #b58845;
 
+}
 .deleted {
   background-color: rgb(255, 0, 0, 0.5);
 }
@@ -240,7 +243,7 @@ input[type="search"]::-webkit-search-cancel-button {
 .user-field div:not(:last-child) {
   margin-right: 1em;
 }
-
+/*
 @media only screen and (max-aspect-ratio: 16/9) {
   .player-dimensions.vjs-fluid {
     padding-top: 46.86% !important;
@@ -250,7 +253,7 @@ input[type="search"]::-webkit-search-cancel-button {
     padding-bottom: 46.86% !important;
   }
 }
-
+*/
 @media screen and (max-width: 767px) {
   .navbar {
     flex-direction: column;
@@ -312,11 +315,6 @@ footer {
 footer a {
   color: #919191 !important;
   text-decoration: underline;
-}
-
-footer span {
-  margin: 4px 0;
-  display: block;
 }
 
 /* keyframes */

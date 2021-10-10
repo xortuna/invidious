@@ -3,6 +3,12 @@
   height: 0;
 }
 
+body, html {
+ height: 100%;
+ padding: 0;
+ margin: 0;
+}
+
 .video-js.player-style-youtube .vjs-progress-control .vjs-progress-holder, .video-js.player-style-youtube .vjs-progress-control {
   position: absolute;
   right: 0;
@@ -208,7 +214,7 @@ vjs-menu-content
 }
 
 .player-dimensions.vjs-fluid {
-  padding-top: 82vh;
+  padding-top: 100vh;
 }
 
 video.video-js {
@@ -218,7 +224,9 @@ video.video-js {
 
 #player-container {
   position: relative;
-  padding-bottom: 82vh;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 100vh;
   height: 0;
 }
 

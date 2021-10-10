@@ -1,45 +1,3 @@
-
-var pos = 0;
-document.addEventListener('keydown', function(e) {
-	if(document.querySelector('video') === null)
-	{
-		console.log(e.which);
-		switch(e.which)
-			{
-			case 38:
-				MoveSelection(-4);
-				e.preventDefault(); // prevent the default action (scroll / move caret)
-			break;
-				case 39:
-				MoveSelection(1);
-				e.preventDefault(); // prevent the default action (scroll / move caret)
-			break;
-					case 37:
-				MoveSelection(-1);
-				e.preventDefault(); // prevent the default action (scroll / move caret)
-			break;
-				case 40:
-				MoveSelection(4);
-				e.preventDefault(); // prevent the default action (scroll / move caret)
-			break;
-			}
-    }
-});
-
-function MoveSelection(dir)
-{
-   var t= document.querySelectorAll('#contents > .pure-g > .pure-u-1 > .h-box');
-          t[pos].classList.remove('active');
-        	pos+= dir;
-          if(pos < 0)
-          	pos = t.length-1;
-          else if(pos >= t.length)
-          	pos = 0;
-          t[pos].classList.add('active');
-          document.querySelectorAll('#contents > .pure-g > .pure-u-1 > .h-box > a')[pos].focus();
-          console.log(pos);
-}
-
 var toggle_theme = document.getElementById('toggle_theme');
 toggle_theme.href = 'javascript:void(0);';
 
@@ -68,15 +26,6 @@ window.addEventListener('DOMContentLoaded', function () {
     window.localStorage.setItem('dark_mode', document.getElementById('dark_mode_pref').textContent);
     // Update localStorage if dark mode preference changed on preferences page
     update_mode(window.localStorage.dark_mode);
-	
-	//fix player width
-	if(document.querySelector('video') != null)
-	{
-		var v = document.getElementById("contents");
-		v.classList.remove('pure-u-md-20-24');
-		v.classList.add('pure-u-md-24-24');
-		window.scrollBy(0,68);
-	}
 });
 
 
